@@ -15,4 +15,4 @@ def PrimesPrint(input):
 # O(n) * O(log(n)) = O(nlog(n))
 PrimesPrint(100)
 
-print("%s seconds" %(time.time() - start_time))
+print ("hi")
