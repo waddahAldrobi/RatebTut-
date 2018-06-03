@@ -12,9 +12,7 @@ def PrimesPrint(input):
         if p>1: # since all the not prime numbers are 0, anything >1 are all prime, ignoring 1
             print p
 
-
 # O(n) * O(log(n)) = O(nlog(n))
 PrimesPrint(100)
 
-
-print "hi"
+print("%s seconds" %(time.time() - start_time))
