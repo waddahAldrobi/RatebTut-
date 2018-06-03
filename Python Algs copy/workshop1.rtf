@@ -1,0 +1,85 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Light;\f2\fmodern\fcharset0 Courier-Bold;
+\f3\fmodern\fcharset0 Courier;\f4\fmodern\fcharset0 Courier-Oblique;}
+{\colortbl;\red255\green255\blue255;\red83\green83\blue83;\red242\green242\blue242;\red0\green0\blue0;
+\red255\green255\blue255;\red8\green66\blue109;\red15\green112\blue1;\red245\green245\blue245;\red38\green38\blue38;
+\red0\green0\blue255;\red51\green110\blue109;\red169\green14\blue26;\red245\green245\blue245;\red169\green14\blue26;
+}
+{\*\expandedcolortbl;;\cssrgb\c40000\c40000\c40000;\cssrgb\c96078\c96078\c96078;\cssrgb\c0\c0\c0;
+\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c33333\c50196;\cssrgb\c0\c50196\c0;\cssrgb\c96863\c96863\c96863;\cssrgb\c20000\c20000\c20000;
+\cssrgb\c0\c0\c100000;\cssrgb\c25098\c50196\c50196;\cssrgb\c72941\c12941\c12941;\cssrgb\c96863\c96863\c96863;\cssrgb\c72941\c12941\c12941;
+}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\partightenfactor0
+
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+  
+\f1\fs32\fsmilli16250 \cf4 \cb5 Markdown (for bolding and formatting)\
+{\field{\*\fldinst{HYPERLINK "https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data"}}{\fldrslt 
+\f0\fs28 \cf6 \ul \ulc6 Kaggle}}
+\f0\fs28 . for competing in algorithms 
+\f2\b \cf7 \cb8 \outl0\strokewidth0 \strokec7 \
+\pard\pardeftab720\sl320\partightenfactor0
+\cf7 \
+import
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 pandas
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf7 \strokec7 as
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 pd
+\f3\b0 \cf9 \strokec9  
+\f4\i \cf11 \strokec11 # Importing and managing our data
+\f3\i0 \cf9 \strokec9 \
+
+\f2\b \cf7 \strokec7 import
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 numpy
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf7 \strokec7 as
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 np
+\f3\b0 \cf9 \strokec9   
+\f4\i \cf11 \strokec11 # Nice linear algebra functions
+\f3\i0 \cf9 \strokec9 \
+
+\f2\b \cf7 \strokec7 import
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 matplotlib.pyplot
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf7 \strokec7 as
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 plt
+\f3\b0 \cf9 \strokec9   
+\f4\i \cf11 \strokec11 # For making visualaizations
+\f3\i0 \cf9 \strokec9 \
+
+\f2\b \cf7 \strokec7 import
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 seaborn
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf7 \strokec7 as
+\f3\b0 \cf9 \strokec9  
+\f2\b \cf10 \strokec10 sns
+\f3\b0 \cf9 \strokec9  
+\f4\i \cf11 \strokec11 # More visualization tools
+\f3\i0 \cf9 \strokec9 \
+\
+\
+ax \cf2 \strokec2 =\cf9 \strokec9  sns\cf2 \strokec2 .\cf9 \strokec9 boxplot(data\cf2 \strokec2 =\cf9 \strokec9 train_df\cf2 \strokec2 .\cf9 \strokec9 pivot(columns\cf2 \strokec2 =\cf12 \strokec12 "YrSold"\cf9 \strokec9 , values\cf2 \strokec2 =\cf12 \strokec12 "SalePrice"\cf9 \strokec9 ))\
+ax\cf2 \strokec2 .\cf9 \strokec9 set(xlabel\cf2 \strokec2 =\cf12 \strokec12 "Year Sold"\cf9 \strokec9 , ylabel\cf2 \strokec2 =\cf12 \strokec12 "Sale Price (USD)"\cf9 \strokec9 )\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 fig \cf2 \strokec2 =\cf9 \strokec9  plt\cf2 \strokec2 .\cf9 \strokec9 figure()\
+ax \cf2 \strokec2 =\cf9 \strokec9  fig\cf2 \strokec2 .\cf9 \strokec9 add_subplot(\cf2 \strokec2 1\cf9 \strokec9 , \cf2 \strokec2 1\cf9 \strokec9 , \cf2 \strokec2 1\cf9 \strokec9 )\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 ax\cf2 \strokec2 .\cf9 \strokec9 scatter\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+\cf9 \cb13 \outl0\strokewidth0 ax \cf2 =\cf9  sns\cf2 .\cf9 regplot(x\cf2 =\cf9 train_df[\cf14 "GrLivArea"\cf9 ], \
+                 y\cf2 =\cf9 (train_df[\cf14 "1stFlrSF"\cf9 ] \cf2 +\cf9 train_df[\cf14 "2ndFlrSF"\cf9 ]),\
+                 line_kws\cf2 =\cf9 \{\cf14 'color'\cf9 : \cf14 'red'\cf9 \})\
+ax\cf2 .\cf9 set(xlabel\cf2 =\cf14 "Total Square Footage"\cf9 , ylabel\cf2 =\cf14 "1st Floor + 2nd Floor Square Footage"\cf9 )}
