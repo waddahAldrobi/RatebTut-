@@ -16,4 +16,3 @@ def PrimesPrint(input):
 PrimesPrint(100)
 
 print ("hi")
-print ("sexy")
